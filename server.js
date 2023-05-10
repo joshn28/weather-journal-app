@@ -26,3 +26,7 @@ const server = app.listen(port, listening);
 function listening() {
     console.log(`Running server on port ${port}`);
 }
+
+app.get('/all', (req, res) => {
+    res.send(projectData);
+});
