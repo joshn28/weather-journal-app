@@ -30,3 +30,17 @@ function listening() {
 app.get('/all', (req, res) => {
     res.send(projectData);
 });
+
+app.post('/addEntry', addEntry);
+
+function addEntry(req, res) {
+    const data = req.body;
+    const newEntry = {};
+
+    newEntry.temp = data.main.temp;
+    newEntry.date = data.date;
+    newEntry.content = data.content;
+    
+    projectData[data.zip] = newEntry;
+    console.log(projectData);
+}
