@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Journal App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/weather-icon.svg">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Weather Journal</h1>
+            <img src="./img/weather-icon.svg" alt="sun">
+        </div>
+        <div class="inputs">
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" placeholder="Enter ZIP Code here">
+            <label for="feelings">How are you feeling?</label>
+            <textarea name="feelings" id="feelings" cols="30" rows="10"></textarea>
+            <button type="button" id="generate">Generate</button>
+        </div>
+        <div id="entryHolder" class="hidden">
+            <p>Recent Entry:</p>
+            <div id="date"></div>
+            <div id="temp"></div>
+            <div id="content"></div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
