@@ -42,6 +42,7 @@ $ npm install
 # Run server
 $ node server.js
 ```
+Next, open your web browser and type localhost:3000 into the address bar to access the application.
 
 # Dependencies
 - express
