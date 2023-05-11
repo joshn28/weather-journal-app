@@ -25,6 +25,7 @@ document.getElementById('generate').addEventListener('click', function() {
     });
 });
 
+// Add and remove the necessary classes to switch between light and dark mode
 document.querySelector('.color-switch').addEventListener('click', function(evt) {
     const root = document.documentElement;
     root.classList.toggle('light');
