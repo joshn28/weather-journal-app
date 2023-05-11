@@ -25,6 +25,14 @@ document.getElementById('generate').addEventListener('click', function() {
     });
 });
 
+document.querySelector('.color-switch').addEventListener('click', function(evt) {
+    const root = document.documentElement;
+    root.classList.toggle('light');
+    root.classList.toggle('dark');
+
+    evt.target.classList.toggle('moon');
+});
+
 const getWeatherData = async (zip) => {
     const response = await fetch(baseURL+zip+',us&appid='+apiKey);
 
