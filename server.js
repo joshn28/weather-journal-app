@@ -39,7 +39,7 @@ function addEntry(req, res) {
 
     newEntry.temp = data.main.temp;
     newEntry.date = data.date;
-    newEntry.content = data.content;
+    newEntry.feel = data.feel;
     
     projectData[data.zip] = newEntry;
     console.log(projectData);
