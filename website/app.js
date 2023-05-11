@@ -6,6 +6,10 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 
 document.getElementById('generate').addEventListener('click', function() {
     const zip = document.getElementById('zip').value;
+    // hide entry box
+    const entry = document.getElementById('entryHolder');
+    entry.classList.remove('animation')
+    entry.classList.add('hidden');
 
     getWeatherData(zip)
     .then(function(data) {
@@ -60,7 +64,10 @@ const retrieveData = async () =>{
         // Transform into JSON
         const appData = await request.json();
         const data = appData[zip];
-        console.log(data);
+        // show entry with animation
+        const entry = document.getElementById('entryHolder');
+        entry.classList.remove('hidden');
+        entry.classList.add('animation')
         // Clear inputs
         document.getElementById('zip').value = '';
         document.getElementById('feelings').value = '';
