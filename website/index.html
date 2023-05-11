@@ -16,8 +16,11 @@
             <img src="./img/weather-icon.svg" alt="sun">
         </div>
         <div class="inputs">
-            <label for="zip">ZIP Code:</label>
-            <input type="text" id="zip" placeholder="Enter ZIP Code here">
+            <div class="text-input">
+                <label for="zip">ZIP Code:</label>
+                <input type="text" pattern="[0-9]{5}" maxlength="5" title="Five digit ZIP code" id="zip" placeholder="Enter ZIP Code here">
+                <span class="error hidden">Invalid ZIP code.</span>
+            </div>
             <label for="feelings">How are you feeling?</label>
             <textarea name="feelings" id="feelings" cols="30" rows="10"></textarea>
             <button type="button" id="generate">Generate</button>

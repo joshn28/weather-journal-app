@@ -8,7 +8,7 @@ document.getElementById('generate').addEventListener('click', function() {
     const zip = document.getElementById('zip').value;
     // Hide entry box
     const entry = document.getElementById('entryHolder');
-    entry.classList.remove('animation')
+    entry.classList.remove('animation');
     entry.classList.add('hidden');
 
     getWeatherData(zip)
@@ -34,12 +34,17 @@ document.querySelector('.color-switch').addEventListener('click', function(evt) 
     evt.target.classList.toggle('moon');
 });
 
+// Hide error message when user modifies the value
+document.getElementById('zip').addEventListener('change', function() {
+    document.querySelector('.error').classList.add('hidden');
+});
+
+// Integrate OpenWeatherMap API
 const getWeatherData = async (zip) => {
-    const response = await fetch(baseURL+zip+',us&appid='+apiKey);
+    const response = await fetch(baseURL+zip+'&appid='+apiKey);
 
     try {
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (err) {
         console.log('error', err);
@@ -73,6 +78,10 @@ const retrieveData = async () =>{
         // Transform into JSON
         const appData = await request.json();
         const data = appData[zip];
+        // Write updated data to DOM elements
+        document.getElementById('temp').innerHTML = Math.round(data.temp) + '°F';
+        document.getElementById('content').innerHTML = data.feel;
+        document.getElementById('date').innerHTML = data.date;
         // Show entry with animation
         const entry = document.getElementById('entryHolder');
         entry.classList.remove('hidden');
@@ -80,12 +89,9 @@ const retrieveData = async () =>{
         // Clear inputs
         document.getElementById('zip').value = '';
         document.getElementById('feelings').value = '';
-        // Write updated data to DOM elements
-        document.getElementById('temp').innerHTML = Math.round(data.temp) + '°F';
-        document.getElementById('content').innerHTML = data.feel;
-        document.getElementById('date').innerHTML = data.date;
     } catch (error) {
         console.log('error', error);
-        // appropriately handle the error
+        // Show error message
+        document.querySelector('.error').classList.remove('hidden');
     }
 }

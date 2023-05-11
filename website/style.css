@@ -47,6 +47,10 @@ input[type='text'] {
     background-color: var(--input-inset-color);
 }
 
+input[type='text']:invalid {
+    border: 2px solid rgb(244 63 94);
+}
+
 textarea {
     resize: none;
     overflow-x: auto;
@@ -123,10 +127,23 @@ label,
     margin: 0 auto;
 }
 
-.inputs {
+.inputs,
+.text-input {
     display: flex;
     flex-direction: column;
     gap: 10px 0;
+}
+
+.text-input {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.error {
+    position: absolute;
+    font-size: 14px;
+    color: rgb(244 63 94);
+    bottom: -18px;
 }
 
 .hidden {
