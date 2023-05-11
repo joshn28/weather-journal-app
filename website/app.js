@@ -35,7 +35,7 @@ document.querySelector('.color-switch').addEventListener('click', function(evt) 
 });
 
 // Hide error message when user modifies the value
-document.getElementById('zip').addEventListener('change', function() {
+document.getElementById('zip').addEventListener('input', function() {
     document.querySelector('.error').classList.add('hidden');
 });
 
