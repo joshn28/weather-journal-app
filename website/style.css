@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    --border-color: rgb(209 213 219);
+    --bg-color: rgb(229 231 235); 
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(55 65 81);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(249 250 251);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+input[type='text'],
+textarea {
+    outline: none;
+}
+
+input[type='text'] {
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+}
+
+textarea {
+    resize: none;
+    overflow-x: auto;
+    font-family: inherit;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+}
+
+button {
+    width: max-content;
+	color: inherit;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	outline: inherit;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+
+label,
+button {
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header img {
+    display: inline-block;
+    height: 100px;
+    width: auto;
+}
+
+.container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.animation {
+    animation-duration: 2s;
+    animation-name: slide-in;
+    position: relative;
+}
+
+@keyframes slide-in {
+    from {
+      opacity: 0;
+      left: -400px;
+    }
+  
+    to {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+#entryHolder {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#entryHolder p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
