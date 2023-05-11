@@ -2,6 +2,8 @@
 const apiKey = '9efedeb2385a30b763768453145212fc&units=imperial';
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 document.getElementById('generate').addEventListener('click', function() {
     const zip = document.getElementById('zip').value;
 
@@ -9,7 +11,7 @@ document.getElementById('generate').addEventListener('click', function() {
     .then(function(data) {
         const date = new Date();
 
-        data.date = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`;
+        data.date = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
         data.feel = document.getElementById('feelings').value;
         data.zip = zip;
 
@@ -63,7 +65,7 @@ const retrieveData = async () =>{
         document.getElementById('zip').value = '';
         document.getElementById('feelings').value = '';
         // Write updated data to DOM elements
-        document.getElementById('temp').innerHTML = Math.round(data.temp) + ' degrees';
+        document.getElementById('temp').innerHTML = Math.round(data.temp) + '°F';
         document.getElementById('content').innerHTML = data.feel;
         document.getElementById('date').innerHTML = data.date;
     } catch (error) {
