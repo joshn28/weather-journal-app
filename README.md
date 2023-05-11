@@ -25,7 +25,7 @@ In order to use this project, you must:
 
 1. Enter a valid US ZIP code.
 2. Use the textbox to type how you are feeling today.
-3. Click the generate button to create a entry.
+3. Click the generate button to create an entry.
 
 # Development
 In order to use this project, please follow the provided instructions:
