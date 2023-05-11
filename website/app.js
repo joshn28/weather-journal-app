@@ -9,7 +9,6 @@ document.getElementById('generate').addEventListener('click', function() {
     // Hide entry box
     const entry = document.getElementById('entryHolder');
     entry.classList.remove('animation');
-    entry.classList.add('hidden');
 
     getWeatherData(zip)
     .then(function(data) {
@@ -85,7 +84,7 @@ const retrieveData = async () =>{
         // Show entry with animation
         const entry = document.getElementById('entryHolder');
         entry.classList.remove('hidden');
-        entry.classList.add('animation')
+        entry.classList.add('animation');
         // Clear inputs
         document.getElementById('zip').value = '';
         document.getElementById('feelings').value = '';
