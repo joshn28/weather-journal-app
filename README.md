@@ -28,21 +28,25 @@ In order to use this project, you must:
 3. Click the generate button to create an entry.
 
 # Development
-In order to use this project, please follow the provided instructions:
+In order to use this project, you need to first clone the repo:
 ```
 # Clone repo
 $ git clone git@github.com:joshn28/weather-journal-app.git
 
 # Change directory
 $ cd weather-journal-app
+```
+Next, you need to obtain an API key from [OpenWeatherMap](https://openweathermap.org/) and replace the placeholder text at the top of the app.js file with your API key.
 
+Then, you need to install the dependencies as well as run the server.
+```
 # Install dependencies
 $ npm install
 
 # Run server
 $ node server.js
 ```
-Next, open your web browser and type localhost:3000 into the address bar to access the application.
+Finally, open your web browser and type localhost:3000 into the address bar to access the application.
 
 # Dependencies
 - express
