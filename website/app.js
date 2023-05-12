@@ -1,5 +1,5 @@
 // Personal API Key for OpenWeatherMap API
-const apiKey = '9efedeb2385a30b763768453145212fc&units=imperial';
+const apiKey = '<your_api_key>&units=imperial';
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
