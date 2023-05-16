@@ -2,9 +2,14 @@
 
 An asynchronous web app that uses Web API and user data to dynamically update the UI in a Weather Journal application.
 
+# Quickstart/Demo
+
+![weather-journal-app-demo](https://github.com/joshn28/weather-journal-app/assets/50343790/ab4fb5ca-10a2-4538-9c72-fd53704937fa)
+
 # Table of Contents
 
 - [Weather Journal App](#weather-journal-app)
+- [Quickstart/Demo](#quickstartdemo)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
