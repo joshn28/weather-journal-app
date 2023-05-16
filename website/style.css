@@ -183,3 +183,21 @@ label,
     font-weight: bold;
     margin: 0;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 40%;
+    }
+}
